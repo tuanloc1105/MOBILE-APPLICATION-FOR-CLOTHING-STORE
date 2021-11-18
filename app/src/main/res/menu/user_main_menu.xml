@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/profile"
+            android:title="Profile"/>
+        <item
+            android:id="@+id/cart"
+            android:title="Your cart"/>
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Order">
+            <menu>
+                <item
+                    android:id="@+id/order"
+                    android:title="Check My Order"/>
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Sign out">
+            <menu>
+                <item
+                    android:id="@+id/logout"
+                    android:title="Log out"/>
+            </menu>
+        </item>
+    </group>
+</menu>

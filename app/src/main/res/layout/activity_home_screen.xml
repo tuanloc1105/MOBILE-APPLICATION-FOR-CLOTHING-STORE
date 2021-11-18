@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreen"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/menu_header"
+        app:menu="@menu/user_main_menu"
+        android:layout_gravity="start">
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/menuToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_menu_gallery" />
+
+        <TextView
+            android:id="@+id/vv_l"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/font_roboto_black"
+            android:gravity="top"
+            android:text="@string/vv_l"
+            android:textAppearance="@style/vv_l"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022" />
+
+        <View
+            android:id="@+id/vector"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="112dp"
+            android:background="@drawable/search_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/vv_l"
+            app:layout_constraintEnd_toEndOf="@+id/menuToolbar"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toEndOf="@+id/vv_l"
+            app:layout_constraintTop_toTopOf="@+id/vv_l"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/shirtCatagory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Shirts"
+            android:textAllCaps="false"
+            android:fontFamily="@font/font_roboto_black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.021"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menuToolbar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/trouserCatagory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Pants"
+            android:textAllCaps="false"
+            android:fontFamily="@font/font_roboto_black"
+            app:layout_constraintBottom_toBottomOf="@+id/shirtCatagory"
+            app:layout_constraintStart_toEndOf="@+id/shirtCatagory"
+            app:layout_constraintTop_toTopOf="@+id/shirtCatagory"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/shoesCatagory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Sneakers"
+            android:textAllCaps="false"
+            android:fontFamily="@font/font_roboto_black"
+            app:layout_constraintBottom_toBottomOf="@+id/trouserCatagory"
+            app:layout_constraintStart_toEndOf="@+id/trouserCatagory"
+            app:layout_constraintTop_toTopOf="@+id/trouserCatagory"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/hatCatagory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Hats"
+            android:textAllCaps="false"
+            android:fontFamily="@font/font_roboto_black"
+            app:layout_constraintBottom_toBottomOf="@+id/shoesCatagory"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/shoesCatagory"
+            app:layout_constraintTop_toTopOf="@+id/shoesCatagory"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleOption"
+            android:layout_width="match_parent"
+            android:layout_height="597dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/hatCatagory"-->
+<!--            android:layout_width="411dp"-->
+<!--            android:layout_height="151dp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/shirtCatagory"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.84"-->
+<!--            tools:srcCompat="@tools:sample/backgrounds/scenic" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/shirtCatagory"-->
+<!--            android:layout_width="411dp"-->
+<!--            android:layout_height="151dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/trouserCatagory"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            tools:srcCompat="@tools:sample/backgrounds/scenic" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/trouserCatagory"-->
+<!--            android:layout_width="411dp"-->
+<!--            android:layout_height="151dp"-->
+<!--            android:layout_marginBottom="28dp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/shoesCatagory"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            tools:srcCompat="@tools:sample/backgrounds/scenic" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/shoesCatagory"-->
+<!--            android:layout_width="411dp"-->
+<!--            android:layout_height="151dp"-->
+<!--            android:layout_marginBottom="4dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            tools:srcCompat="@tools:sample/backgrounds/scenic" />-->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+</androidx.drawerlayout.widget.DrawerLayout>

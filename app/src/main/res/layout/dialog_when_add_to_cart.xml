@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_for_cart_dialog"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="System Message"
+        android:textAllCaps="false"
+        android:fontFamily="@font/font_roboto_black"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_red_for_cart_dialog"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This product has been added to your cart"
+            android:textSize="15dp"
+            android:fontFamily="@font/roboto_light"
+            android:textColor="@color/black" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/button_gotocart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Go to my cart"
+                android:textAllCaps="false"
+                android:fontFamily="@font/font_roboto_black" />
+            <Button
+                android:id="@+id/button_ok2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="OK"
+                android:textAllCaps="false"
+                android:fontFamily="@font/font_roboto_black" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
