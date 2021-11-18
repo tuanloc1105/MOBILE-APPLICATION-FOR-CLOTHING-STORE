@@ -23,6 +23,12 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.concurrent.TimeUnit;
 import java.util.function.Predicate;
@@ -59,13 +65,29 @@ public class ForgotPasword extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onClickVerifyPhoneNumber(phoneNum.getText().toString().trim());
+                String no84number = phoneNum.getText().toString().trim().replace("+84", "0");
 
-                /*
-                Intent intent = new Intent(ForgotPasword.this, ResetPassword.class);
-                intent.putExtra("phonenumber", phoneNum.getText().toString().trim());
-                startActivity(intent);
-                */
+//                onClickVerifyPhoneNumber(phoneNum.getText().toString().trim());
+
+                DatabaseReference myRef = FirebaseDatabase.getInstance().getReference();
+                Query finduser = myRef.child("user").orderByChild("phonenum").equalTo(no84number);
+                finduser.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.exists()){
+                            onClickVerifyPhoneNumber(phoneNum.getText().toString().trim());
+                        }
+                        else{
+                            Toast.makeText(ForgotPasword.this,
+                                    "This phone number does not exist! Please try again", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
             }
         });
 

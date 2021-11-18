@@ -29,7 +29,6 @@ public class ResetPassword extends AppCompatActivity {
         setContentView(R.layout.activity_reset_password);
         phone = getIntent().getStringExtra("phonenumber");
         phone = phone.replace("+84", "0");
-        System.out.println(phone);
         getID();
 
         save.setOnClickListener(new View.OnClickListener() {
