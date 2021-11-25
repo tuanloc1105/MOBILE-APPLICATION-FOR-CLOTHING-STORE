@@ -1,4 +1,4 @@
-package com.example.shopping;
+package com.example.shopping.homescreen;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -20,9 +20,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.shopping.cart.CartScreen;
+import com.example.shopping.order.OrderScreen;
+import com.example.shopping.productdetail.ProductDetail;
+import com.example.shopping.profile.ProfileScreen;
+import com.example.shopping.R;
+import com.example.shopping.authentication.MainActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

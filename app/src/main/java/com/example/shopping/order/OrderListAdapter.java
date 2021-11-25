@@ -1,4 +1,4 @@
-package com.example.shopping;
+package com.example.shopping.order;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.shopping.R;
 
 import java.util.ArrayList;
 

@@ -12,34 +12,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Shopping">
         <activity
-            android:name=".ResetPassword"
+            android:name=".authentication.ResetPassword"
             android:exported="false" />
         <activity
-            android:name=".VerifyOTP"
+            android:name=".authentication.VerifyOTP"
             android:exported="false" />
         <activity
-            android:name=".OrderDetailScreen"
+            android:name=".order.OrderDetailScreen"
             android:exported="false" />
         <activity
-            android:name=".OrderScreen"
+            android:name=".order.OrderScreen"
             android:exported="false" />
         <activity
-            android:name=".PaymentScreen"
+            android:name=".payment.PaymentScreen"
             android:exported="false" />
         <activity
-            android:name=".ForgotPasword"
+            android:name=".authentication.ForgotPasword"
             android:exported="false" />
         <activity
-            android:name=".ChangePassword"
+            android:name=".authentication.ChangePassword"
             android:exported="false" />
         <activity
-            android:name=".ProfileScreen"
+            android:name=".profile.ProfileScreen"
             android:exported="true" />
         <activity
-            android:name=".CartScreen"
+            android:name=".cart.CartScreen"
             android:exported="true" />
         <activity
-            android:name=".ProductDetail"
+            android:name=".productdetail.ProductDetail"
             android:exported="true" />
         <activity
             android:name=".UpdateOrDelete"
@@ -47,16 +47,16 @@
         <activity
             android:name=".HatCatagory"
             android:exported="true"
-            android:parentActivityName=".HomeScreen" />
+            android:parentActivityName=".homescreen.HomeScreen" />
         <activity
-            android:name=".HomeScreen"
+            android:name=".homescreen.HomeScreen"
             android:exported="true" />
         <activity
-            android:name=".createAccount"
+            android:name=".authentication.createAccount"
             android:exported="true"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".authentication.MainActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".authentication.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

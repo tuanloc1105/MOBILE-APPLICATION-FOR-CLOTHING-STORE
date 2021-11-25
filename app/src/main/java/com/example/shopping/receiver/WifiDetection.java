@@ -1,4 +1,4 @@
-package com.example.shopping;
+package com.example.shopping.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

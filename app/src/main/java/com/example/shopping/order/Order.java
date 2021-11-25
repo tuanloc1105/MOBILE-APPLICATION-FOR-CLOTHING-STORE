@@ -1,9 +1,8 @@
-package com.example.shopping;
+package com.example.shopping.order;
+
+import com.example.shopping.cart.Cart;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 public class Order {
     private long id;
