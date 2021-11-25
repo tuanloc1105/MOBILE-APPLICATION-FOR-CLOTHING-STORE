@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -24,6 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    private WifiDetection wifiDetection;
     EditText username, password;
     Button login;
     TextView create, forgot;
@@ -48,12 +51,11 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (username.getText().toString().isEmpty()){
-                    Toast.makeText(MainActivity.this, "Please enter your username", Toast.LENGTH_SHORT).show();
+                if (!wifiDetection.isStatus()){
                     return;
                 }
-                else if(password.getText().toString().isEmpty()){
-                    Toast.makeText(MainActivity.this, "Please enter your password", Toast.LENGTH_SHORT).show();
+                if (username.getText().toString().isEmpty() || password.getText().toString().isEmpty()){
+                    Toast.makeText(MainActivity.this, "Please enter username and password", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 String usern = username.getText().toString();
@@ -126,5 +128,18 @@ public class MainActivity extends AppCompatActivity {
                 doubleBackToExitPressedOnce=false;
             }
         }, 2000);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        IntentFilter intentFilter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+        registerReceiver(wifiDetection, intentFilter);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        unregisterReceiver(wifiDetection);
     }
 }
