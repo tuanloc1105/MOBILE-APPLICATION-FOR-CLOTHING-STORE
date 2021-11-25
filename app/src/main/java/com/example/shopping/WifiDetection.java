@@ -19,11 +19,11 @@ public class WifiDetection extends BroadcastReceiver {
         if (ConnectivityManager.CONNECTIVITY_ACTION.equals(intent.getAction())){
             if (isNetworkAvailable(context)){
                 setStatus(true);
-                Toast.makeText(context, "Internet Connected + " + String.valueOf(this.status), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Internet Connected", Toast.LENGTH_SHORT).show();
             }
             else{
                 setStatus(false);
-                Toast.makeText(context, "Please check your internet connection + " + String.valueOf(this.status), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Please check your internet connection", Toast.LENGTH_SHORT).show();
             }
         }
     }

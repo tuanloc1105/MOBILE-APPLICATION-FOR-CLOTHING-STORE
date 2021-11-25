@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         create = findViewById(R.id.createAccount);
         forgot = findViewById(R.id.forgot);
 
+        wifiDetection = new WifiDetection();
+
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!wifiDetection.isStatus()){
+                    Toast.makeText(MainActivity.this, "Please check your internet connection!", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (username.getText().toString().isEmpty() || password.getText().toString().isEmpty()){
