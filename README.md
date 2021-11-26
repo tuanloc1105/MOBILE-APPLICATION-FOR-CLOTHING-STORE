@@ -2,7 +2,7 @@
 
 This is our project for the subject Mobile Apps Development at Ton Duc Thang university
 
-We will use Google Firebase as our database.
+We will use **Google Firebase** as our database.
 
 ![image](https://user-images.githubusercontent.com/65771138/143517021-9de539d0-c066-4691-8f0d-ff230b62eb4e.png)
 
