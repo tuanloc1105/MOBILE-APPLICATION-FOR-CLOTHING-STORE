@@ -2,6 +2,10 @@
 
 This is our project for the subject Mobile Apps Development at Ton Duc Thang university
 
+We will use Google Firebase as our database.
+
+![image](https://user-images.githubusercontent.com/65771138/143516954-c3894e88-ba36-4272-b103-da565a8f1401.png)
+
 # How to run
 To run this app, simply download and open the project in Android Studio, run the app and everything would be work fine
 
