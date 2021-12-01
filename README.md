@@ -9,4 +9,4 @@ We will use **Google Firebase** as our database.
 # How to run
 To run this app, simply download and open the project in Android Studio, run the app and everything would be work fine
 
-``If you can not login or you can not see any product in the homescreen, that mean I block the read and write permission in my Firebase Reaktime Database rules`` 
+``If you can not login or you can not see any product in the homescreen, that mean we have blocked the read and write permission in my Firebase Reaktime Database rules`` 
