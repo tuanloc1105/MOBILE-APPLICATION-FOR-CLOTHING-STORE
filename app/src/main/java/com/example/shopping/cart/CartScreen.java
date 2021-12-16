@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.shopping.model.Cart;
 import com.example.shopping.payment.PaymentScreen;
 import com.example.shopping.R;
 import com.google.firebase.database.DataSnapshot;

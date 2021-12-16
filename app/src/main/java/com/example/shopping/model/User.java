@@ -1,4 +1,4 @@
-package com.example.shopping.authentication;
+package com.example.shopping.model;
 
 public class User {
 

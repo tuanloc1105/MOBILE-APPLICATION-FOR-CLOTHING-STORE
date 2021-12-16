@@ -20,9 +20,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.shopping.R;
-import com.example.shopping.cart.Cart;
+import com.example.shopping.model.Cart;
 import com.example.shopping.cart.CartScreen;
-import com.example.shopping.homescreen.Product;
+import com.example.shopping.model.Product;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;

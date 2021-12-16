@@ -15,9 +15,10 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.shopping.model.Cart;
 import com.example.shopping.productdetail.ProductDetail;
 import com.example.shopping.R;
-import com.example.shopping.homescreen.Product;
+import com.example.shopping.model.Product;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;

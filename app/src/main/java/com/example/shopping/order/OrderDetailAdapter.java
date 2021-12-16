@@ -12,7 +12,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.shopping.R;
-import com.example.shopping.cart.Cart;
+import com.example.shopping.model.Cart;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

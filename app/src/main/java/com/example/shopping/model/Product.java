@@ -1,4 +1,4 @@
-package com.example.shopping.homescreen;
+package com.example.shopping.model;
 
 import java.io.Serializable;
 

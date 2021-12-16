@@ -23,6 +23,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.shopping.cart.CartScreen;
+import com.example.shopping.model.Product;
 import com.example.shopping.order.OrderScreen;
 import com.example.shopping.productdetail.ProductDetail;
 import com.example.shopping.profile.ProfileScreen;

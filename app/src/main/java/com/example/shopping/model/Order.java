@@ -1,6 +1,4 @@
-package com.example.shopping.order;
-
-import com.example.shopping.cart.Cart;
+package com.example.shopping.model;
 
 import java.util.List;
 
